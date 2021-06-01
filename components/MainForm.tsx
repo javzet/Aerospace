@@ -1,37 +1,10 @@
 import React, { FC } from "react";
-
-interface DataSelectProps {
-  name: string;
-  value: string;
-  className?: string;
-}
-
-interface SelectProps {
-  name?: string;
-  id: string | "className";
-  className?: string;
-  data: Array<DataSelectProps>;
-}
-
-const Select: FC<SelectProps> = ({ name, id, className, data }) => {
-  return (
-    <select
-      name={name}
-      id={id === className ? className : id}
-      className={className ? className : ""}
-    >
-      {data.map((item: DataSelectProps) => (
-        <option
-          value={item.value}
-          className={`select-option ${item.className ? item.className : ""}`}
-          key={item.value}
-        >
-          {item.name}
-        </option>
-      ))}
-    </select>
-  );
-};
+import { getMonthName } from "../helpers/calendarHelper";
+import { DataSelectProps } from "../types/types";
+import { Calendario } from "./Calendario/Calendario";
+import { Mes } from "./Calendario/Mes";
+import { DateInput } from "./DateInput";
+import { Select, TestSelect } from "./SelectInput";
 
 export const MainForm: FC = () => {
   const tipo_vuelo: DataSelectProps[] = [
@@ -47,33 +20,30 @@ export const MainForm: FC = () => {
       <div className="mainform">
         <div className="mainform-left">
           <h2>Vuela con Aerospace</h2>
-          <form>
-            <Select
-              data={tipo_vuelo}
-              className={"vuelos-select"}
-              id={"className"}
-            />
+          <form className="reservar-vuelo-form">
+            <div className="form-control">
+              <label htmlFor="vuelos-select">Tipo de vuelo</label>
+              <TestSelect className="vuelos-select" data={tipo_vuelo} />
+            </div>
             <div className="form-control">
               <label htmlFor="origen-select">Orígen</label>
-              <Select
-                data={ciudadOrigen}
-                className={"origen-select"}
-                id={"className"}
-              />
+              <TestSelect className="origen-select" data={ciudadOrigen} />
             </div>
             <div className="form-control">
               <label htmlFor="destino-select">Destino</label>
-              <Select
-                data={ciudadDestino}
-                className={"destino-select"}
-                id={"className"}
-              />
+              <TestSelect className="destino-select" data={ciudadDestino} />
             </div>
             <div className="form-control">
               <label htmlFor="fecha">Fechas</label>
-              <input type="date" id="fecha" />
+              <DateInput />
             </div>
-            <button type="submit">Reserva tu vuelo</button>
+            {/* <Calendario /> */}
+            {/* <Mes year={2021} month={1}>
+              <span className="mes-titulo">{`${getMonthName(1)} ${2021}`}</span>
+            </Mes> */}
+            <button type="submit" className="">
+              Reserva tu vuelo
+            </button>
           </form>
         </div>
       </div>

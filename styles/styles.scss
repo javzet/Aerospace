@@ -1,3 +1,7 @@
+.pointer {
+  cursor: pointer;
+}
+
 .header {
   height: var(--nav-height);
   position: sticky;
@@ -23,6 +27,13 @@
 .extranavlink {
   color: var(--secondary-color);
   font-size: 0.88rem;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background: rgba(var(--normal-white-rgb), 0.14);
+  }
 }
 
 .navbar {
@@ -178,4 +189,236 @@
     left: 0;
     background: var(--secondary-color);
   }
+}
+
+// .vuelos-select {
+//   position: relative;
+//   width: 100%;
+//   display: block;
+//   margin: auto;
+//   outline: none;
+//   border: 1px var(--normal-white) solid;
+//   border-radius: 0.25rem;
+//   font-family: var(--ff);
+//   padding: 0.6rem 1rem;
+//   background-color: transparent;
+//   color: var(--normal-white);
+// }
+
+// .vuelos-select option {
+//   background: red;
+//   &:hover {
+//     color: red;
+//   }
+// }
+
+.form-control {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.form-control > * {
+  flex: 1 1 100%;
+}
+
+.select {
+  height: 3rem;
+  position: relative;
+  border: white solid 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.select .current-value {
+  color: var(--normal-white);
+  font-family: var(--ff);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+  z-index: 10;
+}
+
+.select .options > * {
+  flex: 1 1 100%;
+}
+
+.select .options .option {
+  background: var(--main-color);
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  padding: 0rem 1rem;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(var(--normal-white-rgb), 0.05);
+    border-radius: 0.5rem;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.date-input {
+  height: 3rem;
+  position: relative;
+  border: white solid 1px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.date-input .current-value {
+  color: var(--normal-white);
+  font-family: var(--ff);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+}
+
+.date-input .calendario {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 0.4rem;
+  background-color: var(--main-color);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.mes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 0.8rem;
+}
+
+.mes-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.mes-titulo > * + * {
+  margin-left: 0.3rem;
+}
+
+.mes-container {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.mes-day,
+.mes-dia {
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.mes-dia {
+  justify-content: center;
+}
+
+.mes-day {
+  justify-content: center;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(var(--normal-white-rgb), 0.1);
+    border-radius: 0.4rem;
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(var(--normal-white-rgb), 0.1);
+    border-radius: 0.4rem;
+    opacity: 0;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.mes-first-day-1 {
+  grid-column-start: 1;
+}
+.mes-first-day-2 {
+  grid-column-start: 2;
+}
+.mes-first-day-3 {
+  grid-column-start: 3;
+}
+.mes-first-day-4 {
+  grid-column-start: 4;
+}
+.mes-first-day-5 {
+  grid-column-start: 5;
+}
+.mes-first-day-6 {
+  grid-column-start: 6;
+}
+.mes-first-day-7 {
+  grid-column-start: 7;
 }

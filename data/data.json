@@ -1,0 +1,10 @@
+{
+  "precios": {
+    "voletos": [
+      { "tipo": "", "precio": 0 },
+      { "tipo": "", "precio": 0 },
+      { "tipo": "", "precio": 0 },
+      { "tipo": "", "precio": 0 }
+    ]
+  }
+}

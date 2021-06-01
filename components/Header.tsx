@@ -7,16 +7,16 @@ export const Header: FC = () => {
   return (
     <header className={"header"}>
       <div className={"navcontainer"}>
-        <Link href="/">
-          <>
-            <img
-              src="/prueba-logo-1.svg"
-              alt="Aerospace logo"
-              className={"logo"}
-            />
+        <>
+          <img
+            src="/prueba-logo-1.svg"
+            alt="Aerospace logo"
+            className={"logo"}
+          />
+          <Link href="/">
             <h1 className={"logotitle"}>Aerospace</h1>
-          </>
-        </Link>
+          </Link>
+        </>
         <Nav />
         <Extranav />
       </div>

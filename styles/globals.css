@@ -4,23 +4,34 @@
 }
 
 :root {
-  --font: 16px;
+  /* fonts */
   --ff: "Montserrat", sans-serif;
   --fft: "Coolvetica-rg", sans-serif;
 
+  /* fontsize */
+  --font: 16px;
+
+  /* config */
   --nav-height: 4rem;
 
+  /* colors rgb */
   --main-color-rgb: 0, 32, 96;
-  --main-color: rgb(var(--main-color-rgb));
-
+  --main-color-hover-rgb: 3, 26, 73;
   --blue-color-rgb: 34, 86, 163;
-  --blue-color: rgb(var(--blue-color-rgb));
-  --blue-color-transparent: rgba(var(--blue-color-rgb), 0.3);
+  --secondary-color-rgb: 250, 250, 250;
+  --secondary-color-hover-rgb: 221, 221, 221;
+  --normal-white-rgb: 247, 247, 247;
+  --black-rgb: 0, 0, 0;
 
-  --secondary-color: #fafafa;
-  --secondary-color-hover: #ddd;
-  --normal-white: #f7f7f7;
-  --black: #000000;
+  /* var colors */
+  --blue-color-transparent: rgba(var(--blue-color-rgb), 0.3);
+  --main-color: rgb(var(--main-color-rgb));
+  --main-color-hover: rgb(var(--main-color-hover-rgb));
+  --blue-color: rgb(var(--blue-color-rgb));
+  --secondary-color: rgb(var(--secondary-color-rgb));
+  --secondary-color-hover: rgb(var(--secondary-color-hover-rgb));
+  --normal-white: rgb(var(--normal-white-rgb));
+  --black: rgb(var(--black-rgb));
 }
 
 *,
