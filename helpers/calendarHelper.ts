@@ -1,14 +1,14 @@
-export function getDayName(fecha: Date) {
-  return [
-    "domingo",
-    "lunes",
-    "martes",
-    "miércoles",
-    "jueves",
-    "viernes",
-    "sábado",
-  ][new Date(fecha).getDay()];
-}
+// export function getDayName(fecha: Date) {
+//   return [
+//     "domingo",
+//     "lunes",
+//     "martes",
+//     "miércoles",
+//     "jueves",
+//     "viernes",
+//     "sábado",
+//   ][new Date(fecha).getDay()];
+// }
 
 export function getDayData(fecha: Date) {
   return {
@@ -28,6 +28,11 @@ export function getDayData(fecha: Date) {
 export function getMonthName(mes: number, locale: string = "es") {
   const intl = new Intl.DateTimeFormat(locale, { month: "long" });
   return intl.format(new Date(2021, mes - 1));
+}
+
+export function getDayName(day: number, locale: string = "es") {
+  const intl = new Intl.DateTimeFormat(locale, { dateStyle: "full" });
+  return intl.format(new Date(2021, day - 1));
 }
 
 export function calendarHelper() {

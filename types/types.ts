@@ -18,9 +18,13 @@ export interface MesProps {
   year: number;
   month: number;
   children: ReactNode;
-  onClick?: () => void;
+  onClick?: (e: any) => void;
 }
 
 export interface DateInputProps {
   className?: string;
+  onClick?: (
+    e: any,
+    date?: { day: number; month: number; year: number },
+  ) => number;
 }

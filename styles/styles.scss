@@ -9,6 +9,7 @@
   right: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 
   background: var(--main-color);
 }
@@ -93,6 +94,7 @@
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
+  background-attachment: fixed;
   width: 100%;
   height: calc(100vh - var(--nav-height));
   position: relative;
@@ -153,25 +155,36 @@
   background: rgba(var(--main-color-rgb), 0.5);
   backdrop-filter: blur(1rem);
   box-shadow: 2px 2px 1rem 0px rgba(0, 0, 0, 0.25);
-  padding: 1rem 2rem;
   position: relative;
 
-  &::before {
-    content: "";
-    right: 0;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    background: var(--main-color);
-    position: absolute;
-    border-radius: 0rem 1rem 1rem 0rem;
-    z-index: -1;
-  }
+  display: flex;
+  flex-wrap: wrap;
+
+  // &::before {
+  //   content: "";
+  //   right: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 50%;
+  //   background: var(--main-color);
+  //   position: absolute;
+  //   border-radius: 0rem 1rem 1rem 0rem;
+  //   z-index: -1;
+  // }
+}
+
+.mainform-right {
+  // background: var(--main-color);
+  background: transparent;
+  border-radius: 0rem 1rem 1rem 0rem;
+  width: 50%;
 }
 
 .mainform-left {
-  width: calc(50% - 2rem);
+  width: 50%;
   color: var(--secondary-color);
+  background: transparent;
+  padding: 1rem 2rem;
 }
 
 .mainform-left h2 {
@@ -191,26 +204,35 @@
   }
 }
 
-// .vuelos-select {
-//   position: relative;
-//   width: 100%;
-//   display: block;
-//   margin: auto;
-//   outline: none;
-//   border: 1px var(--normal-white) solid;
-//   border-radius: 0.25rem;
-//   font-family: var(--ff);
-//   padding: 0.6rem 1rem;
-//   background-color: transparent;
-//   color: var(--normal-white);
-// }
+.reservar-vuelo-form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1.4rem;
+  margin: 2rem 0;
+}
 
-// .vuelos-select option {
-//   background: red;
-//   &:hover {
-//     color: red;
-//   }
-// }
+.reservar-vuelo-form > * {
+  flex-basis: 100%;
+}
+
+.reservar-vuelo-form > * + * {
+  margin-top: 1rem;
+}
+
+.reserva-vuelo-boton {
+  margin-top: 1.4rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  background: var(--main-color);
+  font-family: var(--ff);
+  color: var(--normal-white);
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    background: var(--main-color-hover);
+  }
+}
 
 .form-control {
   display: flex;
@@ -288,6 +310,13 @@
 }
 
 .date-input {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.date-input .input {
   height: 3rem;
   position: relative;
   border: white solid 1px;
@@ -295,7 +324,7 @@
   cursor: pointer;
 }
 
-.date-input .current-value {
+.date-input .input .current-value {
   color: var(--normal-white);
   font-family: var(--ff);
   width: 100%;
@@ -309,14 +338,31 @@
 }
 
 .date-input .calendario {
-  width: 100%;
+  width: 50%;
   position: absolute;
-  left: 0;
-  top: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   margin-top: 0.4rem;
-  background-color: var(--main-color);
+  background: transparent;
+  padding: 1.4rem;
+  box-shadow: 1px 1px 1.4rem 0px rgba(var(--black-rgb), 0.5);
+  color: var(--normal-white);
   border-radius: 0.5rem;
-  padding: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    //background-color: rgba(var(--normal-white-rgb), 0.6);
+    background: var(--main-color);
+    //backdrop-filter: blur(5rem);
+    z-index: -1;
+    border-radius: 0.5rem;
+  }
 }
 
 .mes-header {
@@ -324,6 +370,7 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 0.8rem;
+  font-weight: bold;
 }
 
 .mes-titulo {
@@ -352,15 +399,19 @@
   padding: 0.6rem;
   display: flex;
   align-items: center;
+  // color: var(--normal-white);
+  // font-family: var(--ff);
 }
 
 .mes-dia {
   justify-content: center;
+  font-weight: 700;
 }
 
 .mes-day {
   justify-content: center;
   position: relative;
+  cursor: pointer;
   &::after {
     content: "";
     position: absolute;

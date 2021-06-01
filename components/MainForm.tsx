@@ -15,6 +15,11 @@ export const MainForm: FC = () => {
   const ciudadOrigen: DataSelectProps[] = [];
   const ciudadDestino: DataSelectProps[] = [];
 
+  const handleClickDay = ({ target }: { target: { value: string } }) => {
+    console.log(target.value);
+    return parseInt(target.value);
+  };
+
   return (
     <div className="mainform-overlay">
       <div className="mainform">
@@ -35,16 +40,19 @@ export const MainForm: FC = () => {
             </div>
             <div className="form-control">
               <label htmlFor="fecha">Fechas</label>
-              <DateInput />
+              <DateInput onClick={handleClickDay} />
             </div>
             {/* <Calendario /> */}
             {/* <Mes year={2021} month={1}>
               <span className="mes-titulo">{`${getMonthName(1)} ${2021}`}</span>
             </Mes> */}
-            <button type="submit" className="">
+            <button type="submit" className="reserva-vuelo-boton">
               Reserva tu vuelo
             </button>
           </form>
+        </div>
+        <div className="mainform-right">
+          <h1>aaaaaaaaaa</h1>
         </div>
       </div>
     </div>

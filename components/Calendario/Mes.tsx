@@ -30,6 +30,7 @@ export const Mes = ({
             }
             key={dia}
             onClick={onClick}
+            value={dia + 1}
           >
             {dia + 1}
           </li>
