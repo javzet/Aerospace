@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Coolvetica";
+  src: url("/coolvetica-rg.ttf");
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff);
+}
+
+button {
+  font-family: var(--ff);
+  background: 0;
+  outline: 0;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.pointer {
+  cursor: pointer;
+}

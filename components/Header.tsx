@@ -1,9 +1,22 @@
 import Link from "next/link";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { Extranav } from "./Navbar/Extranav";
 import { Nav } from "./Navbar/Nav";
 
 export const Header: FC = () => {
+  useEffect(() => {
+    const setNavMenu = () => {
+      document.querySelector(".navigation-movile").classList.toggle("show");
+    };
+
+    const hamburgerIcon = document.querySelector(".hamburger-icon");
+    hamburgerIcon.addEventListener("click", setNavMenu);
+
+    return () => {
+      hamburgerIcon.removeEventListener("click", setNavMenu);
+    };
+  }, []);
+
   return (
     <header className={"header"}>
       <div className={"navcontainer"}>
@@ -17,8 +30,15 @@ export const Header: FC = () => {
             <h1 className={"logotitle"}>Aerospace</h1>
           </Link>
         </>
-        <Nav />
-        <Extranav />
+        <div className="hamburger-icon">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
+        <div className="navigation-movile">
+          <Nav />
+          <Extranav />
+        </div>
       </div>
     </header>
   );

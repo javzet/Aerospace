@@ -1,0 +1,40 @@
+#logoytitulo {
+  width: 90%;
+  overflow: visible;
+  margin: auto;
+  display: block;
+  transform: translateX(-1.5rem);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("/fondo.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  position: relative;
+}
+
+.cls-1 {
+  font-size: 110px;
+  font-family: var(--fft);
+  font-weight: bold;
+  letter-spacing: -4px;
+}
+
+.cls-1,
+.cls-2,
+.cls-5 {
+  fill: var(--blue-color);
+}
