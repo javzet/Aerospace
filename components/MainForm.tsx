@@ -1,18 +1,29 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { getMonthName } from "../helpers/calendarHelper";
 import { DataSelectProps } from "../types/types";
 import { Calendario } from "./Calendario/Calendario";
 import { Mes } from "./Calendario/Mes";
 import { DateInput } from "./DateInput";
 import { ImgLogo } from "./Images/ImgLogo";
-import { ImgTitle } from "./Images/ImgTitle";
 import { Select, TestSelect } from "./SelectInput";
+import gsap, { Back } from "gsap";
 
 export const VericalLogoTitle = () => {
+  const timeLine = gsap.timeline();
+  useEffect(() => {
+    timeLine.from(".avion-logo", {
+      fill: "#ffff",
+      scale: 0.5,
+      duration: 1.5,
+      x: "-160%",
+      y: "10%",
+    });
+    timeLine.from(".estrella-logo", { opacity: 0 });
+  }, []);
+
   return (
     <div className="logoytitulo-vertical">
       <ImgLogo />
-      <ImgTitle />
     </div>
   );
 };

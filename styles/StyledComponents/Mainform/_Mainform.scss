@@ -1,3 +1,5 @@
+@use '../../Globals/breakpoints' as bp;
+
 .mainform-overlay {
   position: absolute;
   top: var(--nav-height);
@@ -9,8 +11,8 @@
 }
 
 .mainform {
-  width: 86%;
-  height: 92%;
+  width: 98%;
+  height: 98%;
   margin: auto;
   border-radius: 1rem;
   background: rgba(var(--main-color-rgb), 0.5);
@@ -22,6 +24,11 @@
   flex-wrap: wrap;
 }
 
+.mainform-left,
+.mainform-right {
+  width: 100%;
+}
+
 .mainform-right {
   padding: 2rem;
 }
@@ -30,11 +37,11 @@
   // background: var(--main-color);
   background: transparent;
   border-radius: 0rem 1rem 1rem 0rem;
-  width: 50%;
+
+  display: none;
 }
 
 .mainform-left {
-  width: 50%;
   color: var(--secondary-color);
   background: transparent;
   padding: 1rem 2rem;
@@ -96,4 +103,47 @@
 
 .form-control > * {
   flex: 1 1 100%;
+}
+
+.logoytitulo-vertical {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logoytitulo-vertical {
+  .cls-1 {
+    font-size: 95px;
+    font-family: var(--fft);
+    font-weight: bold;
+    letter-spacing: -4px;
+  }
+
+  .cls-1,
+  .cls-2,
+  .cls-5 {
+    fill: var(--main-color);
+  }
+}
+
+@media (min-width: bp.$xsmall) {
+  .mainform {
+    width: 90%;
+    height: 95%;
+  }
+}
+
+@media (min-width: bp.$small1) {
+  .mainform {
+    width: 86%;
+  }
+}
+
+@media (min-width: bp.$small) {
+  .mainform-left,
+  .mainform-right {
+    width: 50%;
+  }
+  .mainform {
+    height: 92%;
+  }
 }

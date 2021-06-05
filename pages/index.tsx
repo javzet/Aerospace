@@ -16,7 +16,7 @@ export default function Home() {
       ease: "circ.out",
     });
     tl.from(".estrella", { opacity: 0, duration: 1 });
-    tl.from(".mainform-overlay", { opacity: 0, translateX: -100 });
+    tl.from(".mainform-overlay", { opacity: 0, translateX: -50 });
     tl.to("#logoytitulo", { opacity: 0 });
   }, []);
 
