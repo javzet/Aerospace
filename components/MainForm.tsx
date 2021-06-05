@@ -4,7 +4,18 @@ import { DataSelectProps } from "../types/types";
 import { Calendario } from "./Calendario/Calendario";
 import { Mes } from "./Calendario/Mes";
 import { DateInput } from "./DateInput";
+import { ImgLogo } from "./Images/ImgLogo";
+import { ImgTitle } from "./Images/ImgTitle";
 import { Select, TestSelect } from "./SelectInput";
+
+export const VericalLogoTitle = () => {
+  return (
+    <div className="logoytitulo-vertical">
+      <ImgLogo />
+      <ImgTitle />
+    </div>
+  );
+};
 
 export const MainForm: FC = () => {
   const tipo_vuelo: DataSelectProps[] = [
@@ -52,7 +63,7 @@ export const MainForm: FC = () => {
           </form>
         </div>
         <div className="mainform-right">
-          <h1>aaaaaaaaaa</h1>
+          <VericalLogoTitle />
         </div>
       </div>
     </div>

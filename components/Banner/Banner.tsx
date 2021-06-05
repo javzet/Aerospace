@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { ImgBanner } from "./ImgBanner";
+import { ImgBanner } from "../Images/ImgBanner";
 
 export const Banner: FC = () => {
   return (

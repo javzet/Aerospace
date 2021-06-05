@@ -38,3 +38,20 @@
 .cls-5 {
   fill: var(--blue-color);
 }
+
+.logoytitulo-vertical {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#logo {
+}
+
+#logo .logo-avion {
+  fill: transparent;
+  stroke: var(--normal-white);
+  stroke-width: 3px;
+}
+
+#titulo {
+}
