@@ -16,10 +16,6 @@ export default function Conocenos() {
         />
         <meta property="og:type" content="website" />
         <meta
-          property="og:image"
-          content="https://aerospace.vercel.app/icon.png"
-        />
-        <meta
           property="og:description"
           content="Nuestra misión convertirnos en la primera opción del público
                   que necesita viajar, satisfacer sus necesidades con excelencia y calidad, así como brindarles total seguridad, integridad con los más altos estándares."

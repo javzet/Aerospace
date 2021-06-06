@@ -18,6 +18,10 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
             referrerPolicy="no-referrer"
           />
+          <meta
+            property="og:image"
+            content="https://aerospace.vercel.app/aerospace-url-logo.png"
+          />
         </Head>
         <body>
           <Main />

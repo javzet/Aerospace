@@ -29,10 +29,6 @@ export default function Home() {
         />
         <meta property="og:type" content="website" />
         <meta
-          property="og:image"
-          content="https://aerospace.vercel.app/icon.png"
-        />
-        <meta
           property="og:description"
           content="Vuela con Aerospace a Méxcio y el mundo, con los mejores precios"
         />
