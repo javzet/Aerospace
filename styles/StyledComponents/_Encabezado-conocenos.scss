@@ -1,0 +1,168 @@
+@use "../Globals/breakpoints" as bp;
+
+.fondo {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  top: var(--nav-height);
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("/aerospace-fondo.jpg");
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+}
+
+.conocenos section {
+  height: calc(100vh - var(--nav-height));
+  flex: 1 1 100%;
+  padding: 2.2rem 1rem;
+}
+
+.conocenos section:nth-child(odd) {
+  background: rgba(var(--normal-white-rgb), 0.5);
+  h2 {
+    color: var(--main-color);
+  }
+}
+
+.conocenos section:nth-child(even) {
+  background: rgba(var(--main-color-rgb), 1);
+  color: var(--normal-white);
+}
+
+.content-center {
+  text-align: center;
+}
+
+.conocenos section {
+  h2 {
+    font-size: 2.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  img {
+    width: 98%;
+    display: block;
+    margin: auto;
+    border-radius: 1rem;
+  }
+}
+
+.conocenos .container {
+  flex-wrap: wrap;
+}
+
+.conocenos-encabezado {
+  background: var(--main-color);
+  height: calc(80vh - var(--nav-height));
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  color: var(--normal-white);
+}
+
+.conocenos-encabezado {
+  position: relative;
+  h1 {
+    font-size: 3rem;
+  }
+
+  .center {
+    z-index: 10;
+  }
+
+  .fondo-avion {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.3;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  #avion {
+    display: block;
+    width: 80%;
+
+    path {
+      fill: var(--normal-white);
+      opacity: 0.15;
+    }
+  }
+}
+
+.center {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: bp.$small) {
+  .center {
+    width: 70%;
+  }
+  .secciones-conocenos {
+    display: flex;
+    flex-wrap: wrap;
+
+    section {
+      flex: 1 1 50%;
+    }
+  }
+  .conocenos-encabezado {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .conocenos section {
+    padding: 2.4rem 1rem;
+
+    img {
+      width: 90%;
+    }
+  }
+  .conocenos section.white {
+    background: rgba(var(--normal-white-rgb), 0.5);
+    h2,
+    h3,
+    ul {
+      color: var(--main-color);
+    }
+    p {
+      color: var(--black);
+    }
+  }
+
+  .conocenos section.blue {
+    background: rgba(var(--main-color-rgb), 1);
+    h2,
+    p {
+      color: var(--normal-white);
+    }
+  }
+}

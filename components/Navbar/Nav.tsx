@@ -10,7 +10,7 @@ export const Nav: FC = () => {
       <Activelink href="/destinos" className={"navbarlink"}>
         Destinos
       </Activelink>
-      <Activelink href="/acerca-de" className={"navbarlink"}>
+      <Activelink href="/conocenos" className={"navbarlink"}>
         Conócenos
       </Activelink>
     </nav>

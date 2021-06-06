@@ -22,7 +22,7 @@ export const Header: FC = () => {
       <div className={"navcontainer"}>
         <>
           <img
-            src="/prueba-logo-1.svg"
+            src="/aerospace-logo.svg"
             alt="Aerospace logo"
             className={"logo"}
           />

@@ -25,6 +25,11 @@ export interface DateInputProps {
   className?: string;
   onClick?: (
     e: any,
-    date?: { day: number; month: number; year: number },
+    date?: { day: number; month: number; year: number }
   ) => number;
+}
+
+export interface SectionProps {
+  children: ReactNode;
+  className?: string;
 }
