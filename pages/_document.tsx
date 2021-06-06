@@ -20,7 +20,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://aerospace.vercel.app/aerospace-url-logo.png"
+            content="https://aerospace.vercel.app/aerospace-url-logo.jpg"
           />
         </Head>
         <body>
