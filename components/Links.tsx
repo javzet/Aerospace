@@ -18,7 +18,7 @@ export const Activelink: FC<LinkProps> = ({ children, href, className }) => {
   return (
     <NL href={href}>
       <a
-        className={`${`${className} ` ? className : ""}${
+        className={`${`${className}` ? className : " "} ${
           router.pathname === href ? "activelink" : ""
         }`}
       >

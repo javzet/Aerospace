@@ -1,27 +1,7 @@
 import { useState } from "react";
-import { DataSelectProps, SelectProps } from "../types/types";
+import { DataSelectProps } from "../types/types";
 
-export const Select = ({ name, id, className, data }: SelectProps) => {
-  return (
-    <select
-      name={name}
-      id={id === className ? className : id}
-      className={className ? className : ""}
-    >
-      {data.map((item: DataSelectProps) => (
-        <option
-          value={item.value}
-          className={`select-option ${item.className ? item.className : ""}`}
-          key={item.value}
-        >
-          {item.name}
-        </option>
-      ))}
-    </select>
-  );
-};
-
-export const TestSelect = ({ className, data }) => {
+export const Select = ({ className, data }) => {
   const [currentValue, setCurrentValue] = useState("Selecionar");
   const [viewOptions, setViewOptions] = useState(false);
 

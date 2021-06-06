@@ -1,12 +1,9 @@
 import React, { FC, useEffect } from "react";
-import { getMonthName } from "../helpers/calendarHelper";
 import { DataSelectProps } from "../types/types";
-import { Calendario } from "./Calendario/Calendario";
-import { Mes } from "./Calendario/Mes";
 import { DateInput } from "./DateInput";
 import { ImgLogo } from "./Images/ImgLogo";
-import { Select, TestSelect } from "./SelectInput";
-import gsap, { Back } from "gsap";
+import { Select } from "./SelectInput";
+import gsap from "gsap";
 
 export const VericalLogoTitle = () => {
   const timeLine = gsap.timeline();
@@ -34,8 +31,18 @@ export const MainForm: FC = () => {
     { value: "sencillo", name: "Vuelo sencillo" },
   ];
 
-  const ciudadOrigen: DataSelectProps[] = [];
-  const ciudadDestino: DataSelectProps[] = [];
+  const ciudadOrigen: DataSelectProps[] = [
+    { name: "Singapur", value: "singapur" },
+    { name: "Tailandia", value: "tailandia" },
+    { name: "Estados Unidos", value: "usa" },
+    { name: "México", value: "mexico" },
+  ];
+  const ciudadDestino: DataSelectProps[] = [
+    { name: "Singapur", value: "singapur" },
+    { name: "Tailandia", value: "tailandia" },
+    { name: "Estados Unidos", value: "usa" },
+    { name: "México", value: "mexico" },
+  ];
 
   const handleClickDay = ({ target }: { target: { value: string } }) => {
     console.log(target.value);
@@ -50,24 +57,20 @@ export const MainForm: FC = () => {
           <form className="reservar-vuelo-form">
             <div className="form-control">
               <label htmlFor="vuelos-select">Tipo de vuelo</label>
-              <TestSelect className="vuelos-select" data={tipo_vuelo} />
+              <Select className="vuelos-select" data={tipo_vuelo} />
             </div>
             <div className="form-control">
               <label htmlFor="origen-select">Orígen</label>
-              <TestSelect className="origen-select" data={ciudadOrigen} />
+              <Select className="origen-select" data={ciudadOrigen} />
             </div>
             <div className="form-control">
               <label htmlFor="destino-select">Destino</label>
-              <TestSelect className="destino-select" data={ciudadDestino} />
+              <Select className="destino-select" data={ciudadDestino} />
             </div>
             <div className="form-control">
               <label htmlFor="fecha">Fechas</label>
               <DateInput onClick={handleClickDay} />
             </div>
-            {/* <Calendario /> */}
-            {/* <Mes year={2021} month={1}>
-              <span className="mes-titulo">{`${getMonthName(1)} ${2021}`}</span>
-            </Mes> */}
             <button type="submit" className="reserva-vuelo-boton">
               Reserva tu vuelo
             </button>

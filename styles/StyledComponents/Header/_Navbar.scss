@@ -187,4 +187,9 @@
   .navbar > * + * {
     margin-left: 1.4rem;
   }
+
+  .activelink {
+    color: var(--secondary-color);
+    font-size: 0.82rem;
+  }
 }

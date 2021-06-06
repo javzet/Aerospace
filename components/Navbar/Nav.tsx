@@ -4,13 +4,13 @@ import { Activelink } from "../Links";
 export const Nav: FC = () => {
   return (
     <nav className={"navbar"}>
-      <Activelink href="/reservar" className={"navbarlink"}>
+      <Activelink href="/" className={"navbarlink"}>
         Reserva tu vuelo
       </Activelink>
       <Activelink href="/destinos" className={"navbarlink"}>
         Destinos
       </Activelink>
-      <Activelink href="/conocenos" className={"navbarlink"}>
+      <Activelink href="/acerca-de" className={"navbarlink"}>
         Conócenos
       </Activelink>
     </nav>
