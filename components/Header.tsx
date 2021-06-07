@@ -27,7 +27,7 @@ export const Header: FC = () => {
             className={"logo"}
           />
           <Link href="/">
-            <h1 className={"logotitle"}>Aerospace</h1>
+            <h1 className={"logotitle pointer"}>Aerospace</h1>
           </Link>
         </>
         <div className="hamburger-icon">

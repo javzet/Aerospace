@@ -1,8 +1,22 @@
 import Head from "next/head";
 import { AvionLogo } from "../components/Images/AvionLogo";
 import { Section } from "../components/Section";
+import gsap from "gsap";
+import { useEffect } from "react";
 
 export default function Conocenos() {
+  const tl = gsap.timeline({ defaults: { duration: 0.6 } });
+
+  useEffect(() => {
+    tl.from(".fondo-avion", {
+      translateX: "-70%",
+      translateY: "50%",
+    });
+    tl.from(".center", {
+      opacity: 0.4,
+    });
+  }, []);
+
   return (
     <>
       <Head>

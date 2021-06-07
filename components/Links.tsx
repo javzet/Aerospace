@@ -4,7 +4,7 @@ import NL from "next/link";
 
 type LinkProps = { children: ReactChild; href: string; className?: string };
 
-const Link: FC<LinkProps> = ({ children, href, className }) => {
+export const Link: FC<LinkProps> = ({ children, href, className }) => {
   return (
     <NL href={href}>
       <a className={className ? className : ""}>{children}</a>
