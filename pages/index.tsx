@@ -25,14 +25,17 @@ export default function Home() {
       <Head>
         <meta
           property="og:title"
-          content="Conócenos - Aerospace, el límite lo pones tú"
+          content="¡Reserva tu vuelo a los mejores precios! - Aerospace, el límite lo pones tú"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:description"
           content="Vuela con Aerospace a Méxcio y el mundo, con los mejores precios"
         />
-        <title>¡Reserva tu vuelo! - Aerospace, el límite lo pones tú</title>
+        <title>
+          ¡Reserva tu vuelo a los mejores precios! - Aerospace, el límite lo
+          pones tú
+        </title>
         <meta
           name="description"
           content="Vuela con Aerospace a Méxcio y el mundo, con los mejores precios"
