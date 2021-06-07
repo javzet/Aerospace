@@ -1,0 +1,50 @@
+@use "../Globals/breakpoints" as bp;
+
+.informacion-overlay {
+  background: rgba(var(--black-rgb), 0.3);
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - var(--nav-height));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.informacion {
+  width: 70%;
+  height: 90%;
+  background: var(--main-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 1rem 0px rgba(var(--black-rgb), 0.25);
+  color: var(--normal-white);
+}
+
+.integrantes {
+  margin: 2rem 0rem;
+
+  & > * + * {
+    margin-top: 1rem;
+  }
+}
+
+.return-btn {
+  display: block;
+  margin: auto;
+  background: rgba(var(--normal-white-rgb), 0.15);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  color: var(--normal-white);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: bp.$small) {
+  .informacion {
+    width: 50%;
+    height: 90%;
+  }
+}
