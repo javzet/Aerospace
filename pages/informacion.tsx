@@ -17,7 +17,7 @@ export default function Informacion() {
               <li>Carisma Sánchez Acosta</li>
               <li>Areli Jazmín Morales Gonzáles</li>
               <li>Alex Andrés García Martínez</li>
-              <li>Christopher Pérez Estrada</li>
+              <li>Cristopher Pérez Estrada</li>
               <li>Mayra Aceves Romero</li>
               <li>Luis Javier Zetina Aguilar</li>
             </ul>
