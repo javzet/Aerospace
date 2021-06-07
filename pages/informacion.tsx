@@ -18,6 +18,7 @@ export default function Informacion() {
               <li>Areli Jazmín Morales Gonzáles</li>
               <li>Alex Andrés García Martínez</li>
               <li>Christopher Pérez Estrada</li>
+              <li>Mayra Aceves Romero</li>
               <li>Luis Javier Zetina Aguilar</li>
             </ul>
 
